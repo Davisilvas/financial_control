@@ -1,10 +1,15 @@
 import React from "react";
 import * as C from "./style"
 
-const ResumeCard = () =>{
+const ResumeCard = (props) =>{
     return(
-        
-        <div>ResumeCard</div>
+        <C.Container>
+            <C.Header>
+                <C.HeaderTitle>{props.title}</C.HeaderTitle>
+                <props.Icon></props.Icon>
+            </C.Header>
+            <C.Total>{props.Total}</C.Total>
+        </C.Container>
     )
 }
 
