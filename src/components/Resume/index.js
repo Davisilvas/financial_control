@@ -1,5 +1,5 @@
 import React from "react";
-import ResumeCard from "../ResumeCards";
+import ResumeItem from "../ResumeItem";
 import * as C from './styles';
 import {
     FaRegArrowAltCircleUp,
@@ -7,15 +7,24 @@ import {
     FaDollarSign,
 } from "react-icons/fa";
 
-const Resume = (props) =>{
+const Resume = ({income, expense, total}) =>{
     return(
         <C.Container>
-            <ResumeCard title="Entradas" Icon={FaRegArrowAltCircleUp} 
-            value={props.income} />
-            <ResumeCard title="Saídas" Icon={FaRegArrowAltCircleDown}
-            value={props.expense} />
-            <ResumeCard title="Total" Icon={FaDollarSign} 
-            value={props.total}/>
+            <ResumeItem 
+                title="Entradas" 
+                Icon={FaRegArrowAltCircleUp} 
+                value={income}
+            />
+            <ResumeItem 
+                title="Saídas" 
+                Icon={FaRegArrowAltCircleDown}
+                value={expense} 
+            />
+            <ResumeItem 
+                title="Total" 
+                Icon={FaDollarSign} 
+                value={total}
+            />
         </C.Container>
     )
 }
